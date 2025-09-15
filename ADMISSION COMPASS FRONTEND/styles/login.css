@@ -3,7 +3,7 @@ body {
 }
 
 fieldset {
-  border-box-sizing: border-box;
+  box-sizing: border-box;
   width: 300px;
   margin: auto;
   padding: 100px;
