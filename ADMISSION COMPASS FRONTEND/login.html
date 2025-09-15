@@ -11,15 +11,17 @@
 <body>
     <main>
         <form>
+            <legend class="welcome-message">LOGIN</legend>
             <fieldset>
-                <legend class="welcome-message">WELCOME</legend>
-                <label for="email" class="mail">Email/Username:</label>
+
+                <label for="email" class="offscreen">Email/Username:</label>
                 <input type="email" id="email" name="email" required placeholder="Enter your email">
                 <br>
-                <label for="password" class="password-text">Password:</label>
+                <label for="password" class="offscreen">Password:</label>
                 <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <button type="submit">Login</button>
             </fieldset>
-            <button type="submit">Login</button>
+
             <p class="error-message"></p>
             <p class="signup-link">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
         </form>
