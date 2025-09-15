@@ -1,0 +1,74 @@
+body{ 
+text-align: center;
+}
+
+fieldset {
+    box-sizing: border-box;
+    width: 300px;
+    margin:  auto;
+    padding: 100px;
+    border: 5x solid #4f649e;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(199, 9, 9, 0.1);
+   display: flex;
+   flex-direction: column;
+   
+}
+
+
+.welcome-message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    padding: 50px;
+}
+
+label{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: normal;
+    font-size: 18px;
+    color: #333;
+    padding-left: 20px;
+    display: inline;
+    text-align: left;
+}
+
+input[type="email"], input[type="password"], input[type="text"]{
+    width:400px;
+    padding:17px;  
+    margin: 13px 0;
+    border: 3px solid #832020;    
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+input:hover{
+    border: 3px solid #300606;      
+    box-shadow: 0 0 30px rgba(199, 9, 9, 0.1);
+transition: ease-in-out all 0.4s;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  transition: 0.3s ease;
+}
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -8px;
+  font-size: 0.8rem;
+  color: #4cafef;
+}
+
+
+input:focus{
+     border-color: #c71f1f;
+  box-shadow: 0 0 14px #911010;
+    outline: none;
+transition: ease-in-out all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;  
+}
