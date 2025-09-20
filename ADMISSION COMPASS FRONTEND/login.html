@@ -11,21 +11,41 @@
 <body>
     <main>
         <form>
-            <legend class="welcome-message">LOGIN</legend>
-            <fieldset>
 
-                <label for="email" class="offscreen">Email/Username:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-                <br>
-                <label for="password" class="offscreen">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
-                <button type="submit">Login</button>
-            </fieldset>
 
-            <p class="error-message"></p>
-            <p class="signup-link">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+            <div class="form-section">
+                <div class="form-container">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <div class="logo" href="images/admissioncompass.jpg"></div>
+                            <h2 class="form-title">Login</h2>
+                            <p class="form-paragraph">Ready To Know Your chances?</p>
+                        </div>
+
+                        <div class="form-body">
+                            <label for="email" class="offscreen">Email/Username:</label>
+                            <div class="input-wrap">
+                                <span class="input-icon"></span>
+                                <input class="form-input" type="email" id="email" name="email" required
+                                    placeholder="Enter your email/username">
+                            </div>
+                        </div>
+                        <div class="form-body">
+                            <label for="password" class="offscreen">Password:</label>
+                            <div class="input-wrap">
+                                <span class="input-icon"></span>
+                                <input class="form-input" type="password" id="password" name="password" required
+                                    placeholder="Enter your password">
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">Login</button>
+
         </form>
     </main>
+    <p class="error-message"></p>
+    <p class="signup-link">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+
+
 </body>
 
 </html>

@@ -1,4 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.hero-section {
+    display: flex;
+    flex: 1;
+    background: url('../images/admissioncompass.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease-out;
+}
+
+.hero-section:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+.form-section {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: #fafafa;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+
+}
+
+
+.form-card {
+    background: transparent;
+    border-radius: 10px;
+    width: 400px;
+    padding: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    animation: pop-up 1s ease-in-out;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    background: rgb(255, 253, 253);
+    margin: 0 auto 1em auto;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: url('../images/admissioncompass.jpg') no-repeat center center/cover;
+}
+
+
+.form-title {
+    margin: 0.3em 1em;
+    font-size: 2em;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.form-paragraph {
+    font-size: 1em;
+    color: rgb(27, 23, 23);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+.form-body {
+    margin-bottom: 2em;
+}
+
+
+
+.input-wrap {
+    position: relative;
+}
+
+
+.input-icon {}
+
+.form-input {
+    color: #000000;
+    width: 100%;
+    padding: 1.2em;
+    border: 2px #3e4591;
+    border-radius: 19px;
+    font-size: 0.9rem;
+    background-color: rgb(231, 226, 226);
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #8f97be;
+    background: rgb(240, 240, 240);
+
+    transform: scale(1.02);
+    transition: ease-in-out all 0.3s;
+}
+
+.form-input:hover {
+    border-color: #504c8b;
+
+    outline: none;
+    transform: scale(1.04);
+    transition: ease-in-out all 0.3s;
+}
+
+
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.submit-button {
+    background-image: linear-gradient(to right, #020014 0%, #030449 51%, #050e41 100%)
+}
+
+.submit-button {
+    width: calc(100% - 15px);
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 14px;
+    display: block;
+}
+
+.submit-button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    animation: 1s ease-out;
+    border-radius: 20px;
+}
+
+
+.login-link {
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #161616;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #2e2d2d;
+}
+
+a:hover {
+    color: #302591;
+    text-decoration: none;
+    transition: ease-in-out all 0.3s;
+}
+
+
+
+/* body {
     text-align: center;
 }
 
@@ -127,4 +369,4 @@ button[type="submit"]:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
-}
+} */
