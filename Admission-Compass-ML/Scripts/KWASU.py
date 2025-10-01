@@ -88,7 +88,7 @@ for _ in range(num_applicants):
     cutoff = department_cutoffs.get(department, department_cutoffs["default"])
 
     # Admission logic
-    if utme_score >= 140 and screening_score >= cutoff and olevel_passed:
+    if utme_score >= 160 and screening_score >= cutoff and olevel_passed:
         admitted = "admitted"
     else:
         admitted = "not admitted"

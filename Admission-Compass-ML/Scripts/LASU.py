@@ -131,11 +131,12 @@ import random
 
 # ... your data generation code ...
 
-# Construct full path to save the file reliably
-#base_dir = os.path.dirname(os.path.dirname(__file__))  # this gets to Smart-Admissions/
-# Ensure Data folder exists
-os.makedirs("Data", exist_ok=True)
-data_path = os.path.join("Data", "LASU.csv")
-df.to_csv(data_path, index=False)
+base_dir = r"C:\Users\USER\Desktop\ADMISSION-COMPASS\Admission-Compass-ML\Data"
+os.makedirs(base_dir, exist_ok=True)
+
+file_path = os.path.join(base_dir, "LASU.csv")
+df.to_csv(file_path, index=False)
+
+print("Dataset saved successfully at:", file_path)
 
 print("Dataset generated successfully!")
