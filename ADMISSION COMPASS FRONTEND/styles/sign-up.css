@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.hero-section {
+    display: flex;
+    flex: 1;
+    background: url('../images/admissioncompass.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease-out;
+}
+
+.hero-section:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+
+
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+.form-section {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: #fafafa;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+
+}
+
+
+.form-card {
+    background: transparent;
+    border-radius: 10px;
+    width: 400px;
+    padding: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    animation: pop-up 1s ease-in-out;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    background: rgb(255, 253, 253);
+    margin: 0 auto 1em auto;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: url('../images/admissioncompass.jpg') no-repeat center center/cover;
+}
+
+
+.form-title {
+    margin: 0.3em 1em;
+    font-size: 2em;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.form-paragraph {
+    font-size: 1em;
+    color: rgb(27, 23, 23);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+.form-body {
+    margin-bottom: 2em;
+}
+
+
+
+.input-wrap {
+    position: relative;
+}
+
+
+.input-icon {}
+
+.form-input {
+    color: #000000;
+    width: 100%;
+    padding: 1.2em;
+    border: 2px #3e4591;
+    border-radius: 19px;
+    font-size: 0.9rem;
+    background-color: rgb(231, 226, 226);
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #8f97be;
+    background: rgb(240, 240, 240);
+
+    transform: scale(1.02);
+    transition: ease-in-out all 0.3s;
+}
+
+.form-input:hover {
+    border-color: #504c8b;
+
+    outline: none;
+    transform: scale(1.04);
+    transition: ease-in-out all 0.3s;
+}
+
+
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.submit-button {
+    background-image: linear-gradient(to right, #020014 0%, #030449 51%, #050e41 100%)
+}
+
+.submit-button {
+    width: calc(100% - 15px);
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 14px;
+    display: block;
+}
+
+.submit-button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    animation: 1s ease-out;
+    border-radius: 20px;
+}
+
+
+.login-link {
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #161616;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #2e2d2d;
+}
+
+a:hover {
+    color: #302591;
+    text-decoration: none;
+    transition: ease-in-out all 0.3s;
+}
+
+
+
+/* body {
+    text-align: center;
+}
+
+fieldset {
+    box-sizing: border-box;
+    width: 300px;
+    margin: auto;
+    padding: 100px;
+    border: 5x solid #4f649e;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(199, 9, 9, 0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.welcome-message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #b91717;
+    padding: 50px;
+}
+
+label {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: normal;
+    font-size: 18px;
+    color: #333;
+    padding-left: 20px;
+    display: inline;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 400px;
+    padding: 17px;
+    margin: 13px 0;
+    border: 3px solid #832020;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+input:hover {
+    border-color: #c71f1f;
+    box-shadow: 0 0 14px #911010;
+    outline: none;
+    transition: ease-in-out all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -8px;
+    font-size: 0.8rem;
+    color: #4cafef;
+}
+
+
+input:focus {
+    border-color: #c71f1f;
+    box-shadow: 0 0 14px #911010;
+    outline: none;
+    transition: ease-in-out all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+
+
+
+
+
+
+.login-link {
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+a:hover {
+    color: #a11919;
+    text-decoration: none;
+    transition: ease-in-out all 0.3s;
+}
+
+button[type="submit"] {
+    background-image: linear-gradient(to right, #870000 0%, #190A05 51%, #870000 100%)
+}
+
+button[type="submit"] {
+    width: calc(100% - 15px);
+    margin: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+button[type="submit"]:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+} */
