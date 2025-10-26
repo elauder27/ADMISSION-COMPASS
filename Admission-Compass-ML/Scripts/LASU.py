@@ -101,10 +101,20 @@ for _ in range(num_applicants):
     # Simulate O'level grades and score
     grades = random.choices(list(olevel_scale.keys()), k=5)
     olevel_points = [olevel_scale[g] for g in grades]
-    olevel_avg = sum(olevel_points)
+    olevel_avg = sum(olevel_points) #max 50
+    olevel_avg_point = round(olevel_avg / 5, 2) #max 10
 
     # screening score calculation: 50% UTME + 50% O'level
-    screening_score = round((utme_score / 8) + sum(olevel_points), 2)
+    #screening_score = round(((utme_score / 400) * 50) + ((sum(olevel_points) / 50) * 50), 2)
+    # Normalize UTME (out of 400 → 50 marks)
+    utme_component = (utme_score / 400) * 50
+    
+    # Normalize O'level (sum of 5 subjects, each max 10 → 50 marks)
+    olevel_component = (sum(olevel_points) / 50) * 50
+    
+    # Combine both = total screening score (0–100)
+    screening_score = round(utme_component + olevel_component, 2)
+
 
     # O'level passed (assume pass if no F9 or more than 2 sittings)
     sittings = random.choice([1, 2, 3])  # simulate
