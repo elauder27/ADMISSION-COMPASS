@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import random
 import pandas as pd
 
@@ -104,7 +105,7 @@ for _ in range(num_applicants):
     department = random.choice(departments[faculty])
     
     # UTME score (≥200 for UNILAG)
-    utme_score = random.randint(200, 400)
+    utme_score = random.randint(140, 400)
     
     # O'level grades (5 subjects, valid if all ≥ C6)
     grades = random.choices(list(olevel_scale.keys()), k=5)
@@ -141,9 +142,11 @@ df = pd.DataFrame(data, columns=[
     "Post_UTME_Score", "Aggregate", "Cutoff", "Admission_Status"
 ])
 
-# Save to CSV
-base_dir = r"C:\Users\USER\Desktop\ADMISSION-COMPASS\Admission-Compass-ML\Data"
+# Save to CSV in your project’s Data folder
+ROOT_DIR = Path(__file__).resolve().parent.parent
+base_dir = ROOT_DIR / "Data"
 os.makedirs(base_dir, exist_ok=True)
+
 file_path = os.path.join(base_dir, "UNILAG.csv")
 df.to_csv(file_path, index=False)
 
