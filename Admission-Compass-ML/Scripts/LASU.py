@@ -56,7 +56,7 @@ departments = {
     #     "Child Dental Health", "Oral and Maxillofacial Surgery", "Oral Pathology/Oral Medicine",
     #     "Preventive Dentistry", "Restorative Dentistry"
     # ],
-    "College of MEdicine": [
+    "College of Medicine": [
         "Dentistry", "Medical Laboratory Science", "Medicine & Surgery", "Nursing", "Pharmacy",
         "Pharmacology", "Physiology", "Physiotherapy", "Radiography & Radiation Science"
     ],
@@ -140,7 +140,6 @@ df = pd.DataFrame(data, columns=[
 
 # Save to CSV
 
-# ... your data generation code ...
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 # get the file path dynamically, note to Chosen:
